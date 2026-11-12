@@ -1,0 +1,26 @@
+# 快捷键速查表：读 Umbriel 的 [keybinds] 和输入法热键，用中文分组显示，可以搜索。
+#
+# Umbriel 自带的 cheatsheet-toggle 只有英文动作名，配置里也不能给快捷键写说明，
+# 所以由 keybinds.py 按动作名翻译。每次打开面板都重读配置，改了快捷键不用动这里。
+
+id = "wolala/keybinds"
+name = "快捷键速查表"
+version = "0.1.0"
+plugin_api = 43
+author = "wolala"
+license = "MIT"
+tags = ["panel", "service", "utility"]
+icon = "keyboard"
+description = "用中文列出 Umbriel 和输入法的快捷键，可以搜索。"
+
+[[service]]
+id = "service"
+entry = "service.luau"
+
+[[panel]]
+id = "panel"
+entry = "panel.luau"
+width = 900
+height = 680
+placement = "floating"
+position = "center"

@@ -1,0 +1,34 @@
+# CC Switch 快捷切换：顶栏显示订阅剩余额度（圆环 + 百分比），控制中心放一个入口，点开面板切换供应商、看用量。
+#
+# 切换走 CC Switch 自己的托盘菜单（DBus com.canonical.dbusmenu），由 ccs.py 读取和点击，
+# 不改 CC Switch 的数据库（用量只读）和各工具的配置文件。需要 CC Switch 在运行。
+
+id = "wolala/cc-switch"
+name = "CC Switch"
+version = "0.4.1"
+plugin_api = 43
+author = "wolala"
+license = "MIT"
+tags = ["bar", "panel", "service", "shortcut", "utility"]
+icon = "arrows-exchange"
+description = "显示并切换 CC Switch 的供应商（Claude Code、Codex 等）。"
+
+[[service]]
+id = "service"
+entry = "service.luau"
+
+[[widget]]
+id = "bar"
+entry = "bar.luau"
+
+[[shortcut]]
+id = "shortcut"
+entry = "shortcut.luau"
+
+[[panel]]
+id = "panel"
+entry = "panel.luau"
+width = 380
+height = 640
+placement = "floating"
+position = "top_right"
